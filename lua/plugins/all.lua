@@ -50,9 +50,14 @@ return {
     {
         "ThePrimeagen/harpoon",
         lazy = true,
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	}
-    }
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        }
+    },
+    {
+        'kevinhwang91/nvim-ufo',
+        lazy = true,
+        dependencies = { 'kevinhwang91/promise-async' }
+    },
 
 }

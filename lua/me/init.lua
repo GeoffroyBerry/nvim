@@ -5,8 +5,9 @@ require("me.treesitter")
 require("me.debug")
 require("me.completion")
 require("me.harpoon")
+require("me.fold")
 
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
 vim.opt.number = true
 vim.opt.rnu = true
 vim.opt.wrap = false

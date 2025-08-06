@@ -24,3 +24,8 @@ vim.keymap.set({'n', 't'}, '<C-l>', '<C-w>l')
 
 vim.keymap.set('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>')
 
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
+-- change gd to use lsp
+vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
+vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
