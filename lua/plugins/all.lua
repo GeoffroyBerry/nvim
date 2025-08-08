@@ -13,6 +13,13 @@ return {
         },
     },
     {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    },
+    {
         "folke/lazydev.nvim",
         ft = "lua", -- only load on lua files
         opts = {
@@ -46,6 +53,12 @@ return {
             "nvim-neotest/nvim-nio",
             "theHamsta/nvim-dap-virtual-text"
         },
+    },
+    -- init.lua:
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+-- or                              , branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {
         "ThePrimeagen/harpoon",

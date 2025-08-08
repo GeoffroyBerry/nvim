@@ -1,5 +1,9 @@
-require("me.remap")
+-- lazyvim recommands setting leader before require
+vim.g.mapleader = ","
+vim.g.maplocalleader = ";"
+
 require("me.lazy")
+require("me.remap")
 require("me.lsp")
 require("me.treesitter")
 require("me.debug")
@@ -21,7 +25,7 @@ vim.opt.expandtab = true
 
 vim.opt.completeopt = { "menuone", "noselect", "popup" }
 
-vim.cmd('abbreviate h vert h')
+vim.cmd('cabbrev h vert h')
 
 
 if vim.g.vscode then

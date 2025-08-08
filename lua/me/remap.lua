@@ -1,6 +1,3 @@
-vim.g.mapleader = ","
-vim.g.maplocalleader = ";"
-
 vim.keymap.set('n', '<F1>', ':set hlsearch!<CR>')
 vim.keymap.set('n', '<Leader>pv', vim.cmd.Ex)
 
@@ -22,7 +19,14 @@ vim.keymap.set({'n', 't'}, '<C-j>', '<C-w>j')
 vim.keymap.set({'n', 't'}, '<C-k>', '<C-w>k')
 vim.keymap.set({'n', 't'}, '<C-l>', '<C-w>l')
 
-vim.keymap.set('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>')
+vim.keymap.set('n', '<leader>fm', ':lua vim.lsp.buf.format()<CR>')
+
+-- require('telescope')
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 

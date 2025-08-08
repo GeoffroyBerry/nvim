@@ -26,3 +26,5 @@ end)
 vim.keymap.set('n', '<leader>t', function ()
     harpoon_term.gotoTerminal(1)
 end)
+
+require("telescope").load_extension('harpoon')
